@@ -8,7 +8,7 @@ const MusicWaveBackground = ({
   className = '',
   containerHeight = 'min-h-screen'
 }) => {
-  const { theme, isDarkMode } = useTheme();
+  const { isDarkMode } = useTheme();
   const [waveHeights, setWaveHeights] = useState(Array(100).fill(0));
   const [animationTime, setAnimationTime] = useState(0);
 
