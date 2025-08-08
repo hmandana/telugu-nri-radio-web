@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import About from './pages/About';
 import ColorPaletteDemo from './components/ColorPaletteDemo';
 import ThemeTest from './components/ThemeTest';
+import logoSvg from '/logo.svg';
 
 const AppContent = () => {
   const { theme } = useTheme();
@@ -57,7 +58,7 @@ const AppContent = () => {
               <div className="flex items-center gap-4">
                 <div className="relative">
                   <img
-                    src="/logo.svg"
+                    src={logoSvg}
                     alt="Telugu NRI Radio"
                     className="w-12 h-12 rounded-lg"
                   />

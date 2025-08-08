@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from './contexts/ThemeContext';
+import logoSvg from '/logo.svg';
 import {
   HomeIcon,
   RadioIcon,
@@ -37,7 +38,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-200">
             <div className="relative">
               <img
-                src="/logo.svg"
+                src={logoSvg}
                 alt="Telugu NRI Radio"
                 className="h-14 w-14 rounded-full bg-transparent p-1 animate-bounce hover:animate-spin transition-all duration-500"
               />

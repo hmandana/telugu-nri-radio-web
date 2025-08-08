@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { PlayIcon, PauseIcon, WarningIcon, LinkIcon } from '../icons/index.jsx';
 import { useTheme } from '../contexts/ThemeContext';
+import logoSvg from '/logo.svg';
 
 const StreamPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -95,7 +96,7 @@ const StreamPlayer = () => {
         {/* Logo */}
         <div className="flex-shrink-0">
           <div className={`w-12 h-12 ${theme.bg.accent} rounded-lg flex items-center justify-center`}>
-            <img src="/logo.svg" alt="Telugu NRI Radio" className="w-8 h-8" />
+            <img src={logoSvg} alt="Telugu NRI Radio" className="w-8 h-8" />
           </div>
         </div>
 

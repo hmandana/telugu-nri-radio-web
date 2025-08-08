@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import MusicWaveBackground from './MusicWaveBackground';
+import logoSvg from '/logo.svg';
 
 const Banner = ({ 
   title, 
@@ -54,7 +55,7 @@ const Banner = ({
               <div className="relative flex-shrink-0">
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-yellow-500/30 to-orange-500/20 rounded-full blur-lg scale-125"></div>
                 <img
-                  src="/logo.svg"
+                  src={logoSvg}
                   alt="Telugu NRI Radio Logo"
                   className={`${getLogoSizeClasses()} relative z-10 drop-shadow-xl hover:scale-105 transition-all duration-300`}
                 />
@@ -93,7 +94,7 @@ const Banner = ({
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-yellow-500/30 to-orange-500/20 rounded-full blur-lg scale-125"></div>
                   <img
-                    src="/logo.svg"
+                    src={logoSvg}
                     alt="Telugu NRI Radio Logo"
                     className={`${getLogoSizeClasses()} relative z-10 drop-shadow-xl hover:scale-105 transition-all duration-300`}
                   />
