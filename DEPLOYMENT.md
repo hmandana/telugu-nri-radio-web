@@ -69,7 +69,7 @@ The deployment configuration includes:
 
 The build process uses:
 - `NODE_ENV=production` for production builds
-- Base path is automatically set to `/telugu-nri-radio/` for GitHub Pages
+- Base path is automatically set to `/telugu-nri-radio-web/` for GitHub Pages
 
 ## Site URL
 

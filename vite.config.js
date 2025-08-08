@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/telugu-nri-radio/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/telugu-nri-radio-web/' : '/',
   server: {
     port: 8080,
     host: true, // Allow access from other devices on the network
