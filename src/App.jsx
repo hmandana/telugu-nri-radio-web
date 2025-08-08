@@ -19,9 +19,11 @@ const AppContent = () => {
   const { theme } = useTheme();
 
   // We'll render Player only once outside the conditional UI
+  // Set basename for GitHub Pages deployment
+  const basename = import.meta.env.PROD ? '/telugu-nri-radio-web' : '';
 
   return (
-    <Router>
+    <Router basename={basename}>
       <div className="App">
         <Navbar />
         <main className="pb-32">
