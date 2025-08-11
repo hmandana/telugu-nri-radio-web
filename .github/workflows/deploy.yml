@@ -42,7 +42,7 @@ jobs:
 
       # Build with the GitHub Pages mode so Vite sets base to /telugu-nri-radio-web/
       - name: Build project
-        run: npm run build -- --mode gh
+        run: npm run build:gh
         env:
           NODE_ENV: production
 
