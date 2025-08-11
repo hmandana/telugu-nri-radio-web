@@ -29,31 +29,32 @@ const PlayerControls = () => {
   const VolumeIcon = getVolumeIcon();
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-2 sm:gap-4">
       {/* Status Indicator */}
       {isLoading && (
-        <div className={`${theme.text.accent} flex items-center gap-2`}>
+        <div className={`${theme.text.accent} flex items-center gap-1 sm:gap-2`}>
           <div className={`animate-spin h-4 w-4 border-2 ${theme.text.accent.replace('text-', 'border-')} border-t-transparent rounded-full`}></div>
-          <span className="text-sm font-medium">Connecting...</span>
+          <span className="text-xs sm:text-sm font-medium hidden sm:inline">Connecting...</span>
         </div>
       )}
       
       {hasError && (
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           <WarningIcon className="w-4 h-4 text-red-400" />
           <button
             onClick={handleRetry}
-            className="text-red-400 hover:text-red-300 text-sm font-medium underline transition-colors"
+            className="text-red-400 hover:text-red-300 text-xs sm:text-sm font-medium underline transition-colors"
           >
-            Retry Connection
+            <span className="hidden sm:inline">Retry Connection</span>
+            <span className="sm:hidden">Retry</span>
           </button>
         </div>
       )}
       
       {isPlaying && (
-        <div className="flex items-center gap-2 text-green-400">
+        <div className="flex items-center gap-1 sm:gap-2 text-green-400">
           <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          <span className="text-sm font-medium">Streaming</span>
+          <span className="text-xs sm:text-sm font-medium hidden sm:inline">Streaming</span>
         </div>
       )}
       
@@ -61,26 +62,26 @@ const PlayerControls = () => {
       {!isPlaying && !isLoading && !hasError && (
         <button 
           onClick={handlePlay}
-          className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-4 py-2 rounded-xl font-medium text-sm transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+          className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white px-3 sm:px-4 py-2 rounded-xl font-medium text-sm transition-all duration-200 flex items-center gap-1 sm:gap-2 shadow-lg hover:shadow-xl hover:scale-105"
         >
           <PlayIcon className="w-4 h-4" />
-          Play
+          <span className="hidden sm:inline">Play</span>
         </button>
       )}
       
       {isPlaying && (
         <button 
           onClick={handlePause}
-          className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-4 py-2 rounded-xl font-medium text-sm transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl hover:scale-105"
+          className="bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white px-3 sm:px-4 py-2 rounded-xl font-medium text-sm transition-all duration-200 flex items-center gap-1 sm:gap-2 shadow-lg hover:shadow-xl hover:scale-105"
         >
           <PauseIcon className="w-4 h-4" />
-          Stop
+          <span className="hidden sm:inline">Stop</span>
         </button>
       )}
       
-      {/* Volume Control */}
+      {/* Volume Control - Hidden on Mobile */}
       <div 
-        className="relative flex items-center"
+        className="relative hidden md:flex items-center"
         onMouseEnter={() => setShowVolumeSlider(true)}
         onMouseLeave={() => setShowVolumeSlider(false)}
       >

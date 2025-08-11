@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { PlayIcon, PauseIcon, WarningIcon, LinkIcon } from '../icons/index.jsx';
 import { useTheme } from '../contexts/ThemeContext';
-import logoSvg from '/logo.svg';
+import logoSvg from '../assets/logo.svg';
 
 const StreamPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);

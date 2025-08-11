@@ -19,7 +19,6 @@ const About = () => {
       <div className="px-4 py-16">
         <Banner
           title="About Telugu NRI Radio"
-          subtitle="Our Story"
           description="Your premier Telugu radio station serving communities across the globe"
           backgroundIntensity="strong"
           layout="centered"

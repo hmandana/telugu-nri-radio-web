@@ -74,6 +74,4 @@ The build process uses:
 ## Site URL
 
 After successful deployment, your site will be available at:
-`https://[your-username].github.io/telugu-nri-radio-web/`
-
-Replace `[your-username]` with your actual GitHub username.
+`https://hmandana.github.io/telugu-nri-radio-web/`

@@ -107,7 +107,6 @@ const LiveRadio = () => {
         <Banner
           title="Live Radio Schedule"
           subtitle={`${getCurrentDate()} • ${getCurrentTime()} EST`}
-          description="Daily programming schedule and show information"
           backgroundIntensity="strong"
           layout="centered"
         />

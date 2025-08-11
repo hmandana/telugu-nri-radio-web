@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../contexts/ThemeContext';
 import MusicWaveBackground from './MusicWaveBackground';
-import logoSvg from '/logo.svg';
+import logoSvg from '../assets/logo.svg';
 
 const Banner = ({ 
   title, 

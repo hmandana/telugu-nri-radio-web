@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTheme } from './contexts/ThemeContext';
-import logoSvg from '/logo.svg';
+import logoSvg from './assets/logo.svg';
 import {
   HomeIcon,
   RadioIcon,
@@ -134,13 +134,13 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className={`lg:hidden ${theme.navbar.text} p-2 ${theme.navbar.buttonBg} rounded-lg transition-colors`}
+              className={`lg:hidden p-2 ${theme.navbar.buttonBg} rounded-lg transition-colors hover:bg-white/20`}
               aria-label="Toggle menu"
             >
               <div className="w-6 h-6 flex flex-col justify-center items-center">
-                <span className={`block w-5 h-0.5 ${theme.navbar.text} transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
-                <span className={`block w-5 h-0.5 ${theme.navbar.text} transform transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-                <span className={`block w-5 h-0.5 ${theme.navbar.text} transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'}`}></span>
+                <span className={`block w-5 h-0.5 bg-current ${isDarkMode ? 'text-white' : 'text-gray-800'} transform transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
+                <span className={`block w-5 h-0.5 bg-current ${isDarkMode ? 'text-white' : 'text-gray-800'} transform transition-all duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`block w-5 h-0.5 bg-current ${isDarkMode ? 'text-white' : 'text-gray-800'} transform transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1' : 'translate-y-1'}`}></span>
               </div>
             </button>
           </div>
@@ -151,11 +151,6 @@ const Navbar = () => {
       <div className={`lg:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}>
         <div className={`${theme.bg.accent} backdrop-blur-xl border-t border-black/10`}>
           <div className="px-4 py-4 space-y-1">
-            {/* Live Status for Mobile */}
-            <div className="flex items-center justify-center gap-2 bg-red-500/20 px-3 py-2 rounded-full mb-4">
-              <div className="w-2 h-2 bg-red-500 rounded-full animate-live-glow"></div>
-              <span className="text-red-400 text-sm font-medium">LIVE STREAMING</span>
-            </div>
 
             {/* Menu Items */}
             {menuItems.map((item, index) => {
